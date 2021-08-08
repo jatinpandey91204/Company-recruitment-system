@@ -9,7 +9,7 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
-
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/validation.css"/>
 <title>Create an account</title>
 
 
@@ -19,41 +19,48 @@ h3 {text-align: center;}
 </head>
 
 <body>
+<div class= "container" >
 <U><Bold><h3>Register</h3></Bold></U>
 	<form id="regForm"  action="./register"
 		method="post" align="center"> 
 		
 		
-		<table style="width: 50%" align="center">
-			<tr>
-				<td>UserName</td>
-				<td><input type="text" name="username" /></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-			<tr>
-				<td>First Name</td>
-				<td><input type="text" name="firstname" /></td>
-			</tr>
-			<tr>
-				<td>Last Name</td>
-				<td><input type="text" name="lastname" /></td>
-			</tr>
-			<tr>
-				<td>Email</td>
-				<td><input type="text" name="email" /></td>
-			</tr>
-			<tr>
-				<td>Address</td>
-				<td><input type="text" name="address" /></td>
-			</tr>
-			<tr>
-				<td>Phone No</td>
-				<td><input type="text" name="phone" /></td>
-			</tr>
-		</table>
+	<div>
+			<input type="text" name="username" />
+			<label for="E" class="ALL">	UserName</label>
+				
+			</div>
+			<div>
+			<input type="password" name="password" />
+			<label for="E" class="ALL">	Password</label>
+				
+			</div>
+			<div>
+			<input type="text" name="firstname" />
+			<label for="E" class="ALL">	First Name</label>
+				
+			</div>
+			<div>
+			<input type="text" name="lastname" />
+			<label for="E" class="ALL">	Last Name</label>
+				
+			</div>
+			<div>
+			<input type="text" name="email" />
+			<label for="E" class="ALL">Email</label>
+				
+			</div>
+			<div>
+			<input type="text" name="address" />
+			<label for="E" class="ALL">Address</label>
+				
+			</div>
+			
+			<div>
+			<input type="text" name="phone" />
+			<label for="E" class="ALL">Phone No</label>
+				
+			</div>
 		<div align="center">
 			<input type="submit" value="Register">
 			<a href="index.jsp">Home</a>

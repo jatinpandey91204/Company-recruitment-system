@@ -8,7 +8,7 @@ import com.example.springmvc.model.User;
 
 public interface CompanyDao {
 
-	 List<User> empList(); 
+	 List<Companyregistration> empList(); 
 
 	void register(Companyregistration user);
 

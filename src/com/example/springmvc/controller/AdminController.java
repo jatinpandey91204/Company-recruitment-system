@@ -22,29 +22,18 @@ public class AdminController {
 
 	@Autowired
 	private UserDao empDao;
-	private CompanyDao companyDao;
 	
 	@RequestMapping(value = "/admin" , method = RequestMethod.GET)
 	public ModelAndView listEmployee(ModelAndView model) throws IOException {
-		System.out.println("inside admin method");
+	
 		List<User> listEmp = empDao.empList();
 		model.addObject("listEmp", listEmp);
 		model.setViewName("admin");
-		System.out.println("outside admin method");
+		
 		return model;
 	}
 	
 	
-	  @RequestMapping(value = "/company" , method = RequestMethod.GET) 
-	  public ModelAndView listEmploye(ModelAndView model) throws IOException {
 	 
-	 
-	  List<User> listEm = companyDao.empList(); 
-	  model.addObject("listEm",
-	 listEm);
-	  
-	  model.setViewName("company");
-	  
-	 return model; }
 	 
 }

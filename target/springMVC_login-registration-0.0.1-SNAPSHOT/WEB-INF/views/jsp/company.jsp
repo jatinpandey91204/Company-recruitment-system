@@ -14,7 +14,7 @@ h2 {text-align: center;}
 </style>
 
 <body>
-	<h2><U>Register Data</U> &emsp;&emsp;&emsp;
+	<h2><U> Data</U> &emsp;&emsp;&emsp;
 	
 <a href="index.jsp" class="btn btn-primary" role="button">Home</a> </h2>
 	
@@ -32,7 +32,7 @@ h2 {text-align: center;}
 		 <th>Update</th>
 		<th>Delete</th>
 		
-		<c:forEach var="user" items="${listEmp}" varStatus="status">
+		<c:forEach var="user" items="${listEm}" varStatus="status">
 			<tr>
 				<td>${user.id}</td>
 				<td>${user.username}</td>

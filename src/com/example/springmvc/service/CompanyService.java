@@ -10,7 +10,7 @@ public interface CompanyService {
 	
 	void register (Companyregistration user);
 	User validateUser(Companylogin login);
-	 public List<User> empList(); 
+	 public List<Companyregistration> empList(); 
 	/* void delete(int id); */
 
 }

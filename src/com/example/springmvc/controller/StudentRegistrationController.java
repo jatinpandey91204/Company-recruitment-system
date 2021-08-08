@@ -20,6 +20,7 @@ import com.example.springmvc.service.UserService;
 public class StudentRegistrationController {
 	@Autowired
 	public UserService userService;
+	public UserDaoImpl userDao;
 	@RequestMapping(value = "/Studentregister", method = RequestMethod.GET)
 	public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mav = new ModelAndView("Studentregister");
@@ -41,31 +42,11 @@ public class StudentRegistrationController {
 	@RequestMapping(value = "/deleteemp/{id}", method = RequestMethod.GET)
 	public String delete(@PathVariable int id) 
 	{
-		System.out.print("delete ");
+	
 		userService.delete(id);
-		System.out.print("delete executed");
-		return "<h2>jatin</h2>";
+
+		return "redirect:/admin";
 		
 	}
-
-	/*
-	 * It displays object data into form for the given id. The @PathVariable puts
-	 * URL data into variable.
-	 */
-	  
-	/*
-	 * @RequestMapping(value="/Studentedit/{id}") public String edit(@PathVariable
-	 * int id) { Emp emp=dao.getEmpById(id); m.addAttribute("command",emp); return
-	 * "empeditform"; }
-	 */
-	  
-		/*
-		 * * It updates model object.
-		 * 
-		 * @RequestMapping(value="/editsave",method = RequestMethod.POST) public String
-		 * editsave(@ModelAttribute("emp") Emp emp){ dao.update(emp); return
-		 * "redirect:/viewemp"; }
-		 */
-	 
 
 }

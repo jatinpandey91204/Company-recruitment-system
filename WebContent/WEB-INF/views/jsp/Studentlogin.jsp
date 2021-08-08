@@ -1,48 +1,50 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<%-- <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/validation.css"/> --%>
-<title>Login</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<%--  <link href="<c:url value="/WEB-INF/resources/css/validation.css"/>"/>  --%>
+ <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/resources/css/validation.css"/>
 
-
+<title>Login an account</title>
 
 </head>
+
 <body>
-
-	<form:form id="loginForm" modelAttribute="login" action="loginProcess"
+<div class= "container" >
+<h1>Login</h1>
+	<form id="loginForm" modelAttribute="login" action="./loginProcess"
 		method="post">
-		<table align="center">
-			<tr>
-				<td><form:label path="username">Username: </form:label></td>
-				<td><form:input path="username" name="username" id="username" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="password">Password:</form:label></td>
-				<td><form:password path="password" name="password"
-						id="password" /></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td align="left"><form:button id="login" name="login">Login</form:button></td>
-			</tr>
-
-			<tr></tr>
-			<tr>
-				<td></td>
-				<td><a href="Student.jsp">Home</a></td>
-			</tr>
+		
+			
+			<div>
+			<input type="text" name="username" />
+			<label for="E" class="ALL">	UserName</label>
+				
+			</div>
+			<div>
+			<input type="password" name="password" />
+				<label for="E" class="ALL">Password</label>
+				
+			</div>
+			
 		</table>
-	</form:form>
+		
+		<div align="center">
+			<input type="submit" value=" Login"id="login" name="login">
+			 <a href="index.jsp"><button class="button">Home</button></a> 
 
-	<table align="center">
-		<tr>
-			<td style="font-style: italic; color: red;">${message}</td>
-		</tr>
-	</table>
-
+		</div>
+	</form>
+	</div>
 </body>
+
 </html>

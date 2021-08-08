@@ -29,7 +29,7 @@ public class CompanyServiceImpl implements CompanyService{
 	}
 
 	
-	 @Override public List<User> empList() { // TODO Auto-generated method stub
+	 @Override public List<Companyregistration> empList() { // TODO Auto-generated method stub
 	  return companyDao.empList(); }
 	 
 

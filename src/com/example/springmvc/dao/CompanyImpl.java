@@ -40,11 +40,11 @@ public class CompanyImpl implements CompanyDao {
 	
 	  @Override
 	  
-	  public List<User> empList() { // TODO Auto-generated method stub List<User>
-		  List<User> list = jdbcTemplate.query("SELECT * FROM company", new RowMapper<User>() {
+	  public List<Companyregistration> empList() { // TODO Auto-generated method stub List<User>
+		  List<Companyregistration> list = jdbcTemplate.query("SELECT * FROM company", new RowMapper<Companyregistration>() {
 	  
-	  @Override public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-	  User user = new User(); 
+	  @Override public Companyregistration mapRow(ResultSet rs, int rowNum) throws SQLException {
+	  Companyregistration user = new Companyregistration(); 
 	  user.setId(rs.getInt("id"));
 	  user.setUsername(rs.getString("username"));
 	  user.setPassword(rs.getString("password"));
